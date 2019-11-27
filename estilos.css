@@ -284,6 +284,27 @@ h2 {
   .container {
     padding: 0px 1em;
   }
+  .hero {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+    z-index: 2;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -395,6 +416,16 @@ h2 {
     text-align: center;
     border: 1px solid transparent;
   }
+
+  .hero h1 {
+    font-size: 1.5em;
+  }
 }
 @media screen and (max-width: 320px) {
+  .hero {
+    padding: 2em 1em;
+  }
+  .hero h1 {
+    font-size: 1.2em;
+  }
 }

@@ -288,6 +288,8 @@
     <script>
       const menu = document.querySelector("#menu");
       const burgerButton = document.querySelector("#burger-menu");
+      const ipadScreen = window.matchMedia("screen and (max-width:767px)");
+
       const handleMenu = () => {
         if (menu.classList.contains("is-active")) {
           menu.classList.remove("is-active");
@@ -295,11 +297,19 @@
           menu.classList.add("is-active");
         }
       };
-      burgerButton.addEventListener("click", handleMenu);
 
-      menu.addEventListener("click", () => {
-        menu.classList.remove("is-active");
-      });
+      const handleListener = event => {
+        if (event.matches) {
+          burgerButton.addEventListener("click", handleMenu);
+        } else {
+          burgerButton.removeEventListener("click", handleMenu);
+        }
+      };
+
+      // menu.addEventListener("click", () => {
+      //   menu.classList.remove("is-active");
+      // });
+      ipadScreen.addListener(handleListener);
     </script>
   </body>
 </html>

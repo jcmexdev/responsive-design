@@ -368,7 +368,10 @@ h2 {
   height: 100%;
 }
 
-@media screen and (max-width: 1204px) {
+@media screen and (max-width: 1023px) {
+  .event-list-title {
+    margin-left: 0px;
+  }
   .portfolio {
     padding: 0;
   }
@@ -400,6 +403,10 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+  h2 {
+    margin-bottom: 20px;
+  }
+
   .burger-menu {
     display: block;
   }
@@ -480,7 +487,7 @@ h2 {
   }
 
   .project-description {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .project-imageContainer {
@@ -503,8 +510,12 @@ h2 {
   }
 }
 @media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.2em;
+  }
+
   .project-details {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .event-detail {

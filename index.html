@@ -280,7 +280,7 @@
         <div>
           <p>
             Made with 💗 by
-            <a href="https://twitter.com/jcmexdev">@JCMEXDEV</a>
+            <a href="https://twitter.com/jcmexdev">@jcmexdev</a>
           </p>
         </div>
       </div>
@@ -301,14 +301,18 @@
       const handleListener = event => {
         if (event.matches) {
           burgerButton.addEventListener("click", handleMenu);
+          menu.addEventListener("click", () => {
+            menu.classList.remove("is-active");
+          });
         } else {
           burgerButton.removeEventListener("click", handleMenu);
+          menu.removeEventListener("click", () => {
+            menu.classList.remove("is-active");
+          });
         }
       };
       handleListener(ipadScreen);
-      // menu.addEventListener("click", () => {
-      //   menu.classList.remove("is-active");
-      // });
+      //
       ipadScreen.addListener(handleListener);
     </script>
   </body>

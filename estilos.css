@@ -47,6 +47,21 @@
 }
 .icon-menu:before {
   content: "\e900";
+  color: var(--color-white);
+}
+.burger-menu {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  display: none;
 }
 
 :root {
@@ -380,6 +395,10 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+  .burger-menu {
+    display: block;
+  }
+
   .header {
     display: block;
     height: auto;

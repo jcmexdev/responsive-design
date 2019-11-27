@@ -173,8 +173,8 @@ h2 {
 }
 
 .event {
-  width: 480px;
-  margin: 10px;
+  width: 48%;
+  margin: 1%;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
@@ -282,6 +282,7 @@ h2 {
 
 @media screen and (max-width: 1204px) {
 }
+
 @media screen and (max-width: 767px) {
   .header {
     display: block;
@@ -319,7 +320,7 @@ h2 {
   .project-url {
     margin: 0.3em 0;
   }
-  
+
   .project-title {
     font-size: 1.5em;
     margin-bottom: 0.3em;
@@ -346,11 +347,23 @@ h2 {
     text-align: center;
   }
 
+  .event {
+    width: auto;
+    flex-shrink: initial;
+  }
 
+  .event img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 480px) {
   .project-details {
     font-size: 12px;
+  }
+
+  .event-detail {
+    margin: -2em 0.5em 0.5em;
+    padding: 1em;
   }
 }
 @media screen and (max-width: 320px) {
